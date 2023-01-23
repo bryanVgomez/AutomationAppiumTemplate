@@ -1,4 +1,9 @@
-E:\Testing\Automation\Learning_Youtube\GitRepo\CucumberFramework\src\test\java\utility\Hook.java
-E:\Testing\Automation\Learning_Youtube\GitRepo\CucumberFramework\src\test\java\stepdefinations\AppiumScenario.java
-E:\Testing\Automation\Learning_Youtube\GitRepo\CucumberFramework\src\test\java\runner\RunTest.java
-E:\Testing\Automation\Learning_Youtube\GitRepo\CucumberFramework\src\test\java\stepdefinations\GoogleSearch.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/stepdefinations/ResultSearchPageSteps.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/pages/FormBookingPage.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/pages/ResultSearchPage.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/utility/Hook.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/stepdefinations/HomePageSteps.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/runner/RunTest.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/pages/HomePage.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/utility/Wait.java
+/Users/bvasquez/Downloads/AutomationAppiumTemplate/src/test/java/stepdefinations/FromBookingPageSteps.java

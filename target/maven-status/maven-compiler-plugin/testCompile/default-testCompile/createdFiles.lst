@@ -1,2 +1,9 @@
-stepdefinations/AppiumScenario.class
+stepdefinations/FromBookingPageSteps.class
+runner/RunTest.class
+pages/ResultSearchPage.class
+pages/HomePage.class
+utility/Wait.class
+stepdefinations/ResultSearchPageSteps.class
+stepdefinations/HomePageSteps.class
+pages/FormBookingPage.class
 utility/Hook.class

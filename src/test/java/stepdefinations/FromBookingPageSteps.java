@@ -30,10 +30,7 @@ public class FromBookingPageSteps {
 		formBookingPage.LlenarFormulario(nombre, apellido, email, address, zipCode, city, phone);
 	}
 
-	@And("^El cliente ingresa datos de tarjeta de credito \"([^\"]*)\" \"([^\"]*)\"$")
-	public void elClienteIngresaDatosDeTarjetaDeCredito(String tarjeta, String expiryDate) {
-		formBookingPage.FormTarjetaCredito(tarjeta,expiryDate);
-	}
+
 
 	@Then("^Se valida reserva exitosa en pantalla$")
 	public void seValidaReservaExitosaEnPantalla() {
@@ -59,6 +56,20 @@ public class FromBookingPageSteps {
 		assertEquals(mensaje2,formBookingPage.revisarFormularioLastName(),"Mensaje desplegado no es similar al solicitado");
 		assertEquals(mensaje1,formBookingPage.revisarFormularioFirsName(),"Mensaje desplegado no es similar al solicitado");
 
+	}
+
+	@And("^El cliente llena con sus datos personales \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"\"([^\"]*)\"$")
+	public void elClienteLlenaConSusDatosPersonales(String nombre, String apellido, String email, String phone)  {
+		Wait.waitXseconds(5);
+		formBookingPage.LlenarFormulario2(nombre, apellido, email,  phone);
+	}
+
+
+
+
+	@And("^El cliente ingresa datos de tarjeta de credito \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void elClienteIngresaDatosDeTarjetaDeCredito(String tarjeta, String expiryDate, String svc)  {
+		formBookingPage.FormTarjetaCredito(tarjeta,expiryDate,svc);
 	}
 }
 
