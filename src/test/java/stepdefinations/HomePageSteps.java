@@ -22,6 +22,9 @@ import pages.HomePage;
 import utility.Hook;
 import utility.Wait;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 public class HomePageSteps {
 
 private WebDriver driver;
@@ -71,6 +74,18 @@ private WebDriver driver;
 
 	@And("^El cliente presionar buscar$")
 	public void elClientePresionarBuscar() {
+		homepage.clickSeach();
+	}
+
+	@Then("^Se valida mensaje en pantalla \"([^\"]*)\"$")
+	public void seValidaMensajeEnPantalla(String mensaje){
+		assertTrue(homepage.isDisplayedMensajeError(),"NO se despliega mensaje error en pantalla");
+		assertEquals(mensaje,homepage.getLabelMensajeError(),"Mensaje desplegado no es similar al solicitado");
+	}
+
+	@And("^El cliente presiona x y presionar buscar$")
+	public void elClientePresionaXYPresionarBuscar() {
+		homepage.clickXbuttom();
 		homepage.clickSeach();
 	}
 }

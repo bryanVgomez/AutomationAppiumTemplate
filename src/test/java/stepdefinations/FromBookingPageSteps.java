@@ -10,6 +10,7 @@ import pages.ResultSearchPage;
 import utility.Hook;
 import utility.Wait;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class FromBookingPageSteps {
@@ -38,7 +39,25 @@ public class FromBookingPageSteps {
 	public void seValidaReservaExitosaEnPantalla() {
 		Wait.waitXseconds(5);
 		formBookingPage.clickX();
-		//assertTrue(formBookingPage.isDisplayedMensajeExitoso(),"NO se despliega mensaje exitoso en pantalla");
+		assertTrue(formBookingPage.isDisplayedMensajeExitoso(),"NO se despliega mensaje exitoso en pantalla");
+	}
+
+	@And("^El cliente presiona add missing details sin rellenar ningun campo$")
+	public void elClientePresionaAddMissingDetailsSinRellenarNingunCampo() {
+		formBookingPage.clickAddMissingDetailsSinRellenarCampos();
+	}
+
+	@Then("^se despliegan mensajes de error en labels \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\"\"([^\"]*)\"$")
+	public void seDesplieganMensajesDeErrorEnLabels(String mensaje1, String mensaje2, String mensaje3, String mensaje4, String mensaje5, String mensaje6, String mensaje7) {
+		formBookingPage.clickFormulariosinrelleno();
+		assertEquals(mensaje7,formBookingPage.revisarFormularioPhone(),"Mensaje desplegado no es similar al solicitado");
+		assertEquals(mensaje6,formBookingPage.revisarFormularioCity(),"Mensaje desplegado no es similar al solicitado");
+		assertEquals(mensaje5,formBookingPage.revisarFormularioZipCode(),"Mensaje desplegado no es similar al solicitado");
+		assertEquals(mensaje4,formBookingPage.revisarFormularioAddress(),"Mensaje desplegado no es similar al solicitado");
+		formBookingPage.volverArriba();
+		assertEquals(mensaje3,formBookingPage.revisarFormularioEmail(),"Mensaje desplegado no es similar al solicitado");
+		assertEquals(mensaje2,formBookingPage.revisarFormularioLastName(),"Mensaje desplegado no es similar al solicitado");
+		assertEquals(mensaje1,formBookingPage.revisarFormularioFirsName(),"Mensaje desplegado no es similar al solicitado");
 
 	}
 }

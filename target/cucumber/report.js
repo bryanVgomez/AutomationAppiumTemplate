@@ -1,76 +1,71 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Reservas.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Validaciones.feature");
 formatter.feature({
   "line": 1,
-  "name": "Validar ingresos de reservas de habitaciones",
+  "name": "Casos de prueba para validaciones de mensajes de error, mensajes de exitos, etc",
   "description": "",
-  "id": "validar-ingresos-de-reservas-de-habitaciones",
+  "id": "casos-de-prueba-para-validaciones-de-mensajes-de-error,-mensajes-de-exitos,-etc",
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 8577615631,
+  "duration": 34445535241,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 4,
-  "name": "Cliente realiza reserva exitosa de alojamiento",
+  "line": 9,
+  "name": "Cliente presiona boton add missing details en formulario de informacion sin llenar ningun campo",
   "description": "",
-  "id": "validar-ingresos-de-reservas-de-habitaciones;cliente-realiza-reserva-exitosa-de-alojamiento",
+  "id": "casos-de-prueba-para-validaciones-de-mensajes-de-error,-mensajes-de-exitos,-etc;cliente-presiona-boton-add-missing-details-en-formulario-de-informacion-sin-llenar-ningun-campo",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 3,
+      "line": 8,
       "name": "@FlujoCompleto"
     },
     {
-      "line": 3,
-      "name": "@SCN01"
+      "line": 8,
+      "name": "@SCN03"
     }
   ]
 });
 formatter.step({
-  "line": 5,
+  "line": 10,
   "name": "El cliente busca destino \"cusco\" y lo selecciona",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
+  "line": 11,
   "name": "El cliente selecciona fechas desde \"31 January 2023\" hasta \"16 February 2023\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 7,
+  "line": 12,
   "name": "El cliente ingresa cantidad de habitaciones y pasajeros \"5 years old\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 8,
+  "line": 13,
   "name": "El cliente presionar buscar",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
+  "line": 14,
   "name": "El cliente realiza click en opcion \"[3]\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 10,
+  "line": 15,
   "name": "El cliente selecciona la habitacion",
   "keyword": "And "
 });
 formatter.step({
-  "line": 11,
-  "name": "El cliente llena con sus datos personales \"Bryan\" \"vasquez\" \"bryan.v.gomez@gmai.com\" \"juan oto 234\" \"3344\" \"santiago\" \"Chile\" \"965280478\" \"Leisure\"",
+  "line": 16,
+  "name": "El cliente presiona add missing details sin rellenar ningun campo",
   "keyword": "And "
 });
 formatter.step({
-  "line": 12,
-  "name": "El cliente ingresa datos de tarjeta de credito \"2222400070000005\" \"03/30\"",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 13,
-  "name": "Se valida reserva exitosa en pantalla",
+  "line": 17,
+  "name": "se despliegan mensajes de error en labels \"Please enter your first name.\" \"Please enter your last name.\" \"Please enter your email address.\"\"Please enter your address.\"\"Please enter your zip/postal code.\"\"Please enter your city.\"\"Please enter your phone number.\"",
   "keyword": "Then "
 });
 formatter.match({
@@ -83,7 +78,7 @@ formatter.match({
   "location": "HomePageSteps.elClienteBuscaDestinoYLoSelecciona(String)"
 });
 formatter.result({
-  "duration": 8058414526,
+  "duration": 9526242035,
   "status": "passed"
 });
 formatter.match({
@@ -100,7 +95,7 @@ formatter.match({
   "location": "HomePageSteps.elClienteSeleccionaFechasDesdeHasta(String,String)"
 });
 formatter.result({
-  "duration": 2618994996,
+  "duration": 2866043360,
   "status": "passed"
 });
 formatter.match({
@@ -113,14 +108,14 @@ formatter.match({
   "location": "HomePageSteps.elClienteIngresaCantidadDeHabitacionesYPasajeros(String)"
 });
 formatter.result({
-  "duration": 29117129333,
+  "duration": 28562303200,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageSteps.elClientePresionarBuscar()"
 });
 formatter.result({
-  "duration": 615473948,
+  "duration": 607052656,
   "status": "passed"
 });
 formatter.match({
@@ -133,87 +128,62 @@ formatter.match({
   "location": "ResultSearchPageSteps.elClienteRealizaClickEnOpcion(String)"
 });
 formatter.result({
-  "duration": 3726285243,
+  "duration": 3452151073,
   "status": "passed"
 });
 formatter.match({
   "location": "ResultSearchPageSteps.elClienteSeleccionaLaHabitacion()"
 });
 formatter.result({
-  "duration": 8471206434,
+  "duration": 8186083803,
+  "status": "passed"
+});
+formatter.match({
+  "location": "FromBookingPageSteps.elClientePresionaAddMissingDetailsSinRellenarNingunCampo()"
+});
+formatter.result({
+  "duration": 3142035208,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Bryan",
+      "val": "Please enter your first name.",
       "offset": 43
     },
     {
-      "val": "vasquez",
-      "offset": 51
+      "val": "Please enter your last name.",
+      "offset": 75
     },
     {
-      "val": "bryan.v.gomez@gmai.com",
-      "offset": 61
+      "val": "Please enter your email address.",
+      "offset": 106
     },
     {
-      "val": "juan oto 234",
-      "offset": 86
+      "val": "Please enter your address.",
+      "offset": 140
     },
     {
-      "val": "3344",
-      "offset": 101
+      "val": "Please enter your zip/postal code.",
+      "offset": 168
     },
     {
-      "val": "santiago",
-      "offset": 108
+      "val": "Please enter your city.",
+      "offset": 204
     },
     {
-      "val": "Chile",
-      "offset": 119
-    },
-    {
-      "val": "965280478",
-      "offset": 127
-    },
-    {
-      "val": "Leisure",
-      "offset": 139
+      "val": "Please enter your phone number.",
+      "offset": 229
     }
   ],
-  "location": "FromBookingPageSteps.elClienteLlenaConSusDatosPersonales(String,String,String,String,String,String,String,String,String)"
+  "location": "FromBookingPageSteps.seDesplieganMensajesDeErrorEnLabels(String,String,String,String,String,String,String)"
 });
 formatter.result({
-  "duration": 18476825368,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "2222400070000005",
-      "offset": 48
-    },
-    {
-      "val": "03/30",
-      "offset": 67
-    }
-  ],
-  "location": "FromBookingPageSteps.elClienteIngresaDatosDeTarjetaDeCredito(String,String)"
-});
-formatter.result({
-  "duration": 5776911410,
-  "status": "passed"
-});
-formatter.match({
-  "location": "FromBookingPageSteps.seValidaReservaExitosaEnPantalla()"
-});
-formatter.result({
-  "duration": 15956683382,
+  "duration": 32255588531,
   "status": "passed"
 });
 formatter.after({
-  "duration": 664617108,
+  "duration": 523137121,
   "status": "passed"
 });
 });

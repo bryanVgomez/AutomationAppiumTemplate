@@ -12,7 +12,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 @CucumberOptions(features={"src//test//resources//features"}
 					,glue={"stepdefinations","utility"}
 					,plugin = {"pretty", "html:target/cucumber"}
-					, tags ={"@FlujoCompleto"}
+					, tags ={"@SCN03"}
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests{

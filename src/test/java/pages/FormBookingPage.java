@@ -61,9 +61,84 @@ public class FormBookingPage extends Hook{
         buttonX.click();
     }
 
+    public void clickFormulariosinrelleno () {
+        AndroidElement nombreLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[1]/android.widget.EditText"));
+        nombreLbl.click();
+        AndroidElement lastNameLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[2]/android.widget.EditText"));
+        lastNameLbl.click();
+        AndroidElement emailLbl3 = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[3]/android.widget.EditText"));
+        emailLbl3.click();
+        AndroidElement addressLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[1]/android.widget.EditText"));
+        addressLbl.click();
+        AndroidElement scrollCountry = (AndroidElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"What's the primary purpose of your trip?\").instance(0))"));
+        scrollCountry.click();
+        AndroidElement zipCodeLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[2]/android.widget.EditText"));
+        zipCodeLbl.click();
+        AndroidElement cityLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[3]/android.widget.EditText"));
+        cityLbl.click();
+        AndroidElement phoneLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[2]/android.widget.EditText"));
+        phoneLbl.click();
+        AndroidElement scrollCountry2 = (AndroidElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"Leisure\").instance(0))"));
+        scrollCountry2.click();
+        AndroidElement purpose = (AndroidElement) driver.findElement(By.id("com.booking:id/business_purpose_leisure"));
+        purpose.click();
+    }
+
+    public void volverArriba () {
+        Wait.waitXseconds(10);
+        AndroidElement scrollCountry = (AndroidElement) driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().text(\"First Name *\").instance(0))"));
+        scrollCountry.click();
+        Wait.waitXseconds(2);
+        AndroidElement nextStepBtn = (AndroidElement) driver.findElement(By.id("com.booking:id/action_button"));
+        nextStepBtn.click();
+
+    }
+
     public boolean isDisplayedMensajeExitoso () {
-        AndroidElement mensajeExitoso = (AndroidElement) driver.findElement(By.id("com.booking:id/bp_processing_screen_spinner_container"));
+        AndroidElement mensajeExitoso = (AndroidElement) driver.findElement(By.id("com.booking:id/confirmation_container"));
         return mensajeExitoso.isDisplayed();
+    }
+
+    public void clickAddMissingDetailsSinRellenarCampos () {
+        Wait.waitXseconds(3);
+        AndroidElement nextStepBtn = (AndroidElement) driver.findElement(By.id("com.booking:id/action_button"));
+        nextStepBtn.click();
+
+    }
+
+    public String revisarFormularioFirsName () {
+        AndroidElement nombreLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[1]/android.widget.TextView[2]"));
+        return nombreLbl.getText();
+    }
+
+    public String revisarFormularioLastName () {
+        AndroidElement lastNameLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[2]/android.widget.TextView[2]"));
+        return lastNameLbl.getText();
+    }
+
+    public String revisarFormularioEmail () {
+        AndroidElement emailLbl3 = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[3]/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[3]/android.widget.TextView[2]"));
+        return emailLbl3.getText();
+    }
+
+    public String revisarFormularioAddress () {
+        AndroidElement addresslbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[1]/android.widget.TextView[2]"));
+        return addresslbl.getText();
+    }
+
+    public String revisarFormularioZipCode () {
+        AndroidElement zipCodeLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[2]/android.widget.TextView[2]"));
+        return zipCodeLbl.getText();
+    }
+
+    public String revisarFormularioCity () {
+        AndroidElement zipCodeLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[3]/android.widget.TextView[2]"));
+        return zipCodeLbl.getText();
+    }
+
+    public String revisarFormularioPhone () {
+        AndroidElement phoneLbl = (AndroidElement) driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout/javaClass[2]/android.widget.TextView[2]"));
+        return phoneLbl.getText();
     }
 
 

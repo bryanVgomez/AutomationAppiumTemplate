@@ -30,7 +30,7 @@ public class Hook {
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "pixel-device");
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"//App//booking.apk");
 		driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
 	@After

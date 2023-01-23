@@ -31,7 +31,7 @@ public class HomePage extends Hook{
 
     }
 
-    public void clickXbuttom() throws InterruptedException {
+    public void clickXbuttom() {
         AndroidElement clickFila = (AndroidElement) driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
         clickFila.click();
     }
@@ -73,6 +73,17 @@ public class HomePage extends Hook{
     public void clickSeach() {
         AndroidElement searchButton = (AndroidElement) driver.findElement(By.id("com.booking:id/facet_search_box_cta"));
         searchButton.click();
+    }
+
+
+    public boolean isDisplayedMensajeError () {
+        AndroidElement mensajeError = (AndroidElement) driver.findElement(By.id("com.booking:id/message"));
+        return mensajeError.isDisplayed();
+    }
+
+    public String getLabelMensajeError(){
+        AndroidElement mensajeError = (AndroidElement) driver.findElement(By.id("com.booking:id/message"));
+        return mensajeError.getText();
     }
 
 
