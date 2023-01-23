@@ -13,7 +13,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 11168171198,
+  "duration": 11372012748,
   "status": "passed"
 });
 formatter.scenario({
@@ -39,6 +39,21 @@ formatter.step({
   "name": "El cliente busca destino \"cusco\" y lo selecciona",
   "keyword": "Given "
 });
+formatter.step({
+  "line": 7,
+  "name": "El cliente selecciona fechas desde \"31 January 2023\" hasta \"16 February 2023\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 8,
+  "name": "El cliente ingresa cantidad de habitaciones y pasajeros \"5 years old\"",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 9,
+  "name": "El cliente presionar buscar",
+  "keyword": "And "
+});
 formatter.match({
   "arguments": [
     {
@@ -46,14 +61,51 @@ formatter.match({
       "offset": 26
     }
   ],
-  "location": "AppiumScenario.elClienteBuscaDestinoYLoSelecciona(String)"
+  "location": "HomePageSteps.elClienteBuscaDestinoYLoSelecciona(String)"
 });
 formatter.result({
-  "duration": 8480861452,
+  "duration": 9769673112,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "31 January 2023",
+      "offset": 36
+    },
+    {
+      "val": "16 February 2023",
+      "offset": 60
+    }
+  ],
+  "location": "HomePageSteps.elClienteSeleccionaFechasDesdeHasta(String,String)"
+});
+formatter.result({
+  "duration": 3193695946,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "5 years old",
+      "offset": 57
+    }
+  ],
+  "location": "HomePageSteps.elClienteIngresaCantidadDeHabitacionesYPasajeros(String)"
+});
+formatter.result({
+  "duration": 34020818922,
+  "status": "passed"
+});
+formatter.match({
+  "location": "HomePageSteps.elClientePresionarBuscar()"
+});
+formatter.result({
+  "duration": 981854096,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1531551844,
+  "duration": 617971221,
   "status": "passed"
 });
 });
