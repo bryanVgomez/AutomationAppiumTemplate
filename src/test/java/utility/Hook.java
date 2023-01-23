@@ -18,23 +18,10 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-/**
- * @author CHIRAG
- *
- */
 public class Hook {
 
 	private static WebDriver driver;
-	
-	@Before("@web")
-	public void setUp()
-	{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"//drivers//chromedriver.exe");
-		driver= new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	}
-	
+
 	@Before("@FlujoCompleto")
 	public void setUpAppium() throws MalformedURLException
 	{
@@ -42,8 +29,8 @@ public class Hook {
 		cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "pixel-device");
 		cap.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir")+"//App//booking.apk");
-		driver = new AndroidDriver<WebElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	}
 	
 	@After

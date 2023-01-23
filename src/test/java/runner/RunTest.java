@@ -9,10 +9,10 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 // Uncomment @RunWith if you are using Junit to run Test 
 // @RunWith(Cucumber.class)
 
-@CucumberOptions(features={"src//test//java//features"}
+@CucumberOptions(features={"src//test//resources//features"}
 					,glue={"stepdefinations","utility"}
 					,plugin = {"pretty", "html:target/cucumber"}
-					, tags ={"@FlujoCompleto"}
+					, tags ={"@allTestCases"}
 		)
 @Test
 public class RunTest extends AbstractTestNGCucumberTests{
