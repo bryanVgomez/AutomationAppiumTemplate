@@ -31,22 +31,9 @@ public class HomePage extends Hook{
 
     }
 
-
-
-
-    @AndroidFindBy(id = "com.booking:id/facet_search_box_accommodation_destination")
-    AndroidElement destinolbl;
-
-    @AndroidFindBy(xpath = "//android.widget.ImageButton[@content-desc=\"Navigate up\"]")
-    public AndroidElement Xbutton;
-
-    //WebElement xbutton = driver.findElementByXPath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]");
-
     public void clickXbuttom() throws InterruptedException {
         AndroidElement clickFila = (AndroidElement) driver.findElement(By.xpath("//android.widget.ImageButton[@content-desc=\"Navigate up\"]"));
         clickFila.click();
-        //driver.wait(5);
-
     }
 
     public void clickDestino() {
@@ -65,11 +52,6 @@ public class HomePage extends Hook{
         AndroidElement dateInitial = (AndroidElement) driver.findElement(By.xpath("//android.view.View[@content-desc=\""+inicial+"\"]"));
         dateInitial.click();
         AndroidElement dateFinal = (AndroidElement) driver.findElement(By.xpath("//android.view.View[@content-desc=\""+fechaFinal+"\"]"));
-        //TouchActions action = new TouchActions(driver);
-        //action.scroll(dateFinal, 10, 100);
-        //action.perform();
-        //JavascriptExecutor js = (JavascriptExecutor) driver;
-        //js.executeScript("window.scrollBy(0,1000)");
         dateFinal.click();
         AndroidElement dateConfirm = (AndroidElement) driver.findElement(By.id("com.booking:id/facet_date_picker_confirm"));
         dateConfirm.click();
