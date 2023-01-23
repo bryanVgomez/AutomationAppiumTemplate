@@ -1,7 +1,6 @@
-@allTestCases
 Feature: Validar ingresos de reservas de habitaciones
 
-  @FlujoCompleto @SCN01
+  @FlujoCompleto @SCN01 @allTestCases
   Scenario: Cliente realiza reserva exitosa de alojamiento
     Given El cliente busca destino "cusco" y lo selecciona
     And El cliente selecciona fechas desde "31 January 2023" hasta "18 February 2023"

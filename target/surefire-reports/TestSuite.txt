@@ -1,30 +1,30 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 119.136 sec <<< FAILURE! - in TestSuite
-feature(runner.RunTest)  Time elapsed: 118.404 sec  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 117.617 sec <<< FAILURE! - in TestSuite
+feature(runner.RunTest)  Time elapsed: 116.88 sec  <<< FAILURE!
 cucumber.runtime.CucumberException: 
 org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 50.08 seconds
+Command duration or timeout: 50.10 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.1.0', revision: 'b94c902', time: '2017-02-16 12:21:31 -0800'
 System info: host: 'MacBook-Pro-de-Bryan.local', ip: 'fda5:79f7:5090:1:4e:dcfb:e7fe:a4c1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_202'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{app=/Users/bvasquez/Downloads/AutomationAppiumTemplate//App//booking.apk, appPackage=com.booking, deviceScreenSize=1440x3120, networkConnectionEnabled=true, statBarHeight=136, warnings={}, viewportRect={top=136, left=0, width=1440, height=2680}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, desired={app=/Users/bvasquez/Downloads/AutomationAppiumTemplate//App//booking.apk, platformName=Android, deviceName=pixel-device}, platformVersion=11, pixelRatio=3.5, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceScreenDensity=560, deviceModel=Android SDK built for x86, platformName=Android, deviceApiLevel=30, deviceManufacturer=unknown}]
-Session ID: bd5d39f0-ed12-48de-9a94-f326827d4b55
-*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[1]/android.widget.EditText}
+Session ID: a437a96a-c75f-4a90-b9fd-e98a484b324e
+*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.Button}
 Caused by: org.openqa.selenium.NoSuchElementException: 
 An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 50.08 seconds
+Command duration or timeout: 50.10 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.1.0', revision: 'b94c902', time: '2017-02-16 12:21:31 -0800'
 System info: host: 'MacBook-Pro-de-Bryan.local', ip: 'fda5:79f7:5090:1:4e:dcfb:e7fe:a4c1%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.16', java.version: '1.8.0_202'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{app=/Users/bvasquez/Downloads/AutomationAppiumTemplate//App//booking.apk, appPackage=com.booking, deviceScreenSize=1440x3120, networkConnectionEnabled=true, statBarHeight=136, warnings={}, viewportRect={top=136, left=0, width=1440, height=2680}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, desired={app=/Users/bvasquez/Downloads/AutomationAppiumTemplate//App//booking.apk, platformName=Android, deviceName=pixel-device}, platformVersion=11, pixelRatio=3.5, webStorageEnabled=false, locationContextEnabled=false, takesScreenshot=true, javascriptEnabled=true, deviceScreenDensity=560, deviceModel=Android SDK built for x86, platformName=Android, deviceApiLevel=30, deviceManufacturer=unknown}]
-Session ID: bd5d39f0-ed12-48de-9a94-f326827d4b55
-*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/javaClass[1]/android.widget.EditText}
+Session ID: a437a96a-c75f-4a90-b9fd-e98a484b324e
+*** Element info: {Using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.RelativeLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.Button}
 
-feature(runner.RunTest)  Time elapsed: 0.079 sec  <<< FAILURE!
+feature(runner.RunTest)  Time elapsed: 0.068 sec  <<< FAILURE!
 cucumber.runtime.CucumberException: 
 org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
 Build info: version: '3.1.0', revision: 'b94c902', time: '2017-02-16 12:21:31 -0800'

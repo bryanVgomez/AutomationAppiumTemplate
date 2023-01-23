@@ -22,7 +22,8 @@ public class Hook {
 
 	private static WebDriver driver;
 
-	@Before("@FlujoCompleto")
+
+	@Before("@allTestCases")
 	public void setUpAppium() throws MalformedURLException
 	{
 		DesiredCapabilities cap = new DesiredCapabilities();
